@@ -31,8 +31,7 @@ This API Testing Suite leverages powerful LLM models to automatically generate c
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x (or above)
-- Required dependencies are listed in `requirements.txt`.
+- Java
 - Node.js
 - Ollama
 - Docker
