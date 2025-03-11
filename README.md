@@ -41,20 +41,18 @@ This API Testing Suite leverages powerful LLM models to automatically generate c
 1. Install ollama
    ```bash
    https://ollama.com/download
-2. Open command promt and install any model(deepseek prefered)
+2. Open the command prompt and install any model (Deepseek is preferred)
    ```bash
    ollama run deepseek-r1:1.5b   
 3. Clone this repository:
    ```bash
-   git clone https://github.com/your-repo-name/api-testing-suite.git
+   git clone https://github.com/ashwithpoojary98/TrithaBotX.git
 4. Run docker file to start the mongo db(backend\apiagent\docker-mongo.yml)   
 5. Run Spring boot code
 6. Navigate to frontend
     ```bash
     cd frontend
     npm start
-
-
 ***
 
 ### Contributing
