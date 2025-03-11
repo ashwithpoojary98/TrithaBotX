@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D47A1" />
+      <stop offset="100%" stop-color="#1565C0" />
+    </linearGradient>
+    
+    <linearGradient id="glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#2979FF" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main circular background -->
+  <circle cx="250" cy="250" r="225" fill="url(#bg-gradient)" />
+  
+  <!-- Outer ring with tech pattern -->
+  <circle cx="250" cy="250" r="210" fill="none" stroke="#29B6F6" stroke-width="1" stroke-dasharray="4,2" />
+  
+  <!-- Abstract circuit pattern - layered effect -->
+  <g stroke="#0288D1" stroke-width="0.75" fill="none">
+    <path d="M100,250 C100,175 175,100 250,100 C325,100 400,175 400,250 C400,325 325,400 250,400 C175,400 100,325 100,250 Z" />
+    <path d="M125,250 C125,185 185,125 250,125 C315,125 375,185 375,250 C375,315 315,375 250,375 C185,375 125,315 125,250 Z" />
+    <path d="M150,250 C150,200 200,150 250,150 C300,150 350,200 350,250 C350,300 300,350 250,350 C200,350 150,300 150,250 Z" />
+  </g>
+  
+  <!-- Radial connection lines -->
+  <g stroke="#64B5F6" stroke-width="1.5">
+    <line x1="250" y1="130" x2="250" y2="370" />
+    <line x1="130" y1="250" x2="370" y2="250" />
+    <line x1="170" y1="170" x2="330" y2="330" />
+    <line x1="170" y1="330" x2="330" y2="170" />
+  </g>
+  
+  <!-- Connection nodes -->
+  <circle cx="250" cy="130" r="4" fill="#40C4FF" />
+  <circle cx="250" cy="370" r="4" fill="#40C4FF" />
+  <circle cx="130" cy="250" r="4" fill="#40C4FF" />
+  <circle cx="370" cy="250" r="4" fill="#40C4FF" />
+  <circle cx="170" cy="170" r="4" fill="#40C4FF" />
+  <circle cx="170" cy="330" r="4" fill="#40C4FF" />
+  <circle cx="330" cy="170" r="4" fill="#40C4FF" />
+  <circle cx="330" cy="330" r="4" fill="#40C4FF" />
+  
+  <!-- Central emblem with API test visualization -->
+  <g filter="url(#glow)">
+    <!-- Hexagonal main shape -->
+    <path d="M250,180 L310,215 L310,285 L250,320 L190,285 L190,215 Z" fill="#01579B" stroke="#80D8FF" stroke-width="2" />
+    
+    <!-- Code visualization -->
+    <text x="250" y="225" font-family="Consolas, monospace" font-size="13" fill="#B3E5FC" text-anchor="middle">GET /api/test</text>
+    <line x1="210" y1="240" x2="290" y2="240" stroke="#B3E5FC" stroke-width="1.5" />
+    <text x="250" y="260" font-family="Consolas, monospace" font-size="10" fill="#B3E5FC" text-anchor="middle">{status:200,pass:true}</text>
+    <text x="250" y="280" font-family="Consolas, monospace" font-size="10" fill="#80D8FF" text-anchor="middle">TEST PASSED</text>
+    
+    <!-- Checkmark -->
+    <path d="M235,290 L245,300 L265,280" stroke="#00E676" stroke-width="3" fill="none" />
+  </g>
+  
+  <!-- The "X" symbol highlighted -->
+  <g transform="translate(305, 235)">
+    <circle cx="0" cy="0" r="20" fill="#880E4F" />
+    <text x="0" y="6" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FF80AB" text-anchor="middle">X</text>
+  </g>
+  
+  <!-- Robot/Bot visualization -->
+  <g transform="translate(185, 235)">
+    <circle cx="0" cy="0" r="20" fill="#0D47A1" stroke="#40C4FF" stroke-width="1.5" />
+    <circle cx="-7" cy="-5" r="4" fill="#00E5FF" />
+    <circle cx="7" cy="-5" r="4" fill="#00E5FF" />
+    <path d="M-7,7 C-4,11 4,11 7,7" stroke="#00E5FF" stroke-width="1.5" fill="none" />
+    <line x1="0" y1="-20" x2="0" y2="-25" stroke="#40C4FF" stroke-width="1.5" />
+    <circle cx="0" cy="-25" r="3" fill="#FF80AB" />
+  </g>
+  
+  <!-- TrithaBotX text with modern styling -->
+  <text x="250" y="380" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">TrithaBotX</text>
+  <text x="250" y="410" font-family="Arial, sans-serif" font-size="16" fill="#81D4FA" text-anchor="middle">API Test Case Generator</text>
+  
+  <!-- Decorative outer ring with animated effect -->
+  <circle cx="250" cy="250" r="223" stroke="url(#glow-gradient)" stroke-width="2" fill="none" />
+</svg>
