@@ -29,6 +29,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -162,9 +163,9 @@ public class ReportService {
 
         // Response time statistics
         List<Long> responseTimes = results.stream()
-                .filter(r -> r.getDuration() != null)
                 .map(TestResult::getDuration)
-                .collect(Collectors.toList());
+                .filter(Objects::nonNull)
+                .toList();
 
         Map<String, Object> responseTimeStats = new HashMap<>();
         if (!responseTimes.isEmpty()) {
